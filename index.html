@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Buoi13</title>
+</head>
+
+<body>
+    <div class="bai1">
+        <h2>Quản Lý Tuyển Sinh</h2>
+
+        <label>Điểm chuẩn:</label><br />
+        <input type="number" id="diemChuan" step="0.1" /><br /><br />
+
+        <label>Điểm môn 1:</label><br />
+        <input type="number" id="mon1" step="0.1" placeholder="0-10 Điểm" /><br /><br />
+
+        <label>Điểm môn 2:</label><br />
+        <input type="number" id="mon2" step="0.1" placeholder="0-10 Điểm" /><br /><br />
+
+        <label>Điểm môn 3:</label><br />
+        <input type="number" id="mon3" step="0.1" placeholder="0-10 Điểm" /><br /><br />
+
+        <label>Khu vực (A, B, C hoặc X):</label><br />
+        <select id="khuVuc">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="X">X</option>
+        </select><br /><br />
+
+        <label>Đối tượng (0, 1, 2, 3):</label><br />
+        <select id="doiTuong">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br /><br />
+
+        <button onclick="tinhKetQua()">Tính kết quả</button><br /><br />
+
+        <div class="result" id="ketQua"></div>
+    </div>
+    <div class="bai2">
+        <h2>Bài 2</h2>
+        <input type="text" id="hoTenKw" placeholder="Nhập họ và tên">
+        <input type="number" id="soKw" placeholder="Nhập số kWh">
+        <button type="button" onclick="tinhTongTien()">Xuất Thông Tin Điện</button>
+        <div id="divThanhTien" class="dongia">
+            <h2>
+                <span id="xuatTien" class="xuatTien"></span>
+            </h2>
+        </div>
+    </div>
+
+    <div class="bai3">
+        <h2>Bài 3</h2>
+        <input type="text" id="hoTenThuNhap" placeholder="Nhập họ và tên"><br><br>
+        <input type="number" id="thuNhapNam" placeholder="Nhập tổng thu nhập năm (VND)"><br><br>
+        <input type="number" id="soNguoiPhuThuoc" placeholder="Nhập số người phụ thuộc"><br><br>
+
+        <button type="button" onclick="tinhThueThuNhap()">Tính Thuế Thu Nhập</button>
+
+        <div id="divThueThuNhap" class="dongia">
+            <h2>
+                <span id="xuatThue" class="xuatThue"></span>
+            </h2>
+        </div>
+    </div>
+
+    <div class="bai4">
+        <h2>Tính tiền cáp</h2>
+
+        <label>Mã khách hàng:</label><br />
+        <input type="text" id="customerCode" /><br /><br />
+
+        <label>Loại khách hàng:</label><br />
+        <select id="customerType" onchange="toggleConnections()">
+            <option value="residential">Nhà dân</option>
+            <option value="business">Doanh nghiệp</option>
+        </select><br /><br />
+
+        <div id="connectionsGroup">
+            <label>Số kết nối:</label><br />
+            <input type="number" id="connections" min="0" value="0" /><br /><br />
+        </div>
+
+        <label>Số kênh cao cấp:</label><br />
+        <input type="number" id="premiumChannels" min="0" value="0" /><br /><br />
+
+        <button onclick="calculateFee()">Tính tiền</button>
+
+        <h3 id="result"></h3>
+    </div>
+
+
+
+    <script src="js/bai2.js"></script>
+    <script src="js/bai3.js"></script>
+    <script src="js/bai1.js"></script>
+    <script src="js/bai4.js"></script>
+    <script src=""></script>
+</body>
+
+</html>
